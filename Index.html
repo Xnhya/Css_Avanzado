@@ -8,43 +8,68 @@
     <title>Proyecto final CSS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@300;400;600;800&display=swap"
         rel="stylesheet">
-
-
 </head>
 
-<body class="bg-gradient-to-br from-slate-900 to-blue-900 min-h-screen">
+<body class="bg-gradient-to-br from-slate-900 bg-[#898ed0] min-h-screen">
 
     <header
-        class="relative w-full min-h-screen flex items-center px-6 md:px-20 bg-black border-b border-white/10 overflow-hidden">
+        class="relative w-full min-h-screen flex items-center px-6 md:px-20 bg-[#1a1919] border-b border-white/10 overflow-hidden">
+        <!-- 'relative': Establece un contexto de posicionamiento para los elementos hijos que usen 'absolute'. -->
+        <!-- 'min-h-screen': Asegura que el header ocupe al menos toda la altura de la pantalla. -->
+        <!-- 'flex items-center': Centra el contenido del header verticalmente. -->
+        <!-- 'px-6 md:px-20': Padding horizontal que se ajusta en pantallas más grandes (responsive). -->
+        <!-- 'bg-black border-b border-white/10': Fondo negro con un borde inferior blanco semitransparente. -->
+        <!-- 'overflow-hidden': Evita que el efecto de 'blur' del fondo se desborde y cree barras de scroll. -->
 
+        <!-- DIV PARA EL EFECTO DE RESPLANDOR (GLOW) EN EL FONDO -->
         <div
             class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#ccff00] opacity-[0.03] blur-[120px] pointer-events-none">
+            <!-- 'absolute top-0 left-1/2 -translate-x-1/2': Centra el div horizontalmente dentro del header. -->
+            <!-- 'w-full h-full': Hace que el div ocupe todo el espacio del header. -->
+            <!-- 'bg-[#ccff00]': Color base del resplandor (un verde/amarillo neón). -->
+            <!-- 'opacity-[0.03]': Opacidad muy baja para que el efecto sea sutil. -->
+            <!-- 'blur-[120px]': Aplica un desenfoque muy grande para crear el efecto de luz difusa. -->
+            <!-- 'pointer-events-none': Hace que este div sea "invisible" para el mouse, permitiendo hacer clic en los elementos que están debajo. -->
         </div>
+        li
 
+        <!-- CONTENEDOR DEL CONTENIDO PRINCIPAL DEL HEADER -->
         <div class="w-full max-w-7xl relative z-10 animate-slide-up-fade">
+            <!-- 'max-w-7xl': Limita el ancho máximo del contenido para mejorar la legibilidad en pantallas grandes. -->
+            <!-- 'relative z-10': Coloca este contenedor por encima del div de resplandor (que no tiene z-index definido). -->
+            <!-- 'animate-slide-up-fade': Es una animación personalizada (definida en la configuración de Tailwind) que hace que el contenido aparezca con un efecto de deslizamiento hacia arriba y desvanecimiento. -->
 
+            <!-- TÍTULO PRINCIPAL -->
             <h1 class="font-sans font-black text-6xl md:text-9xl tracking-tighter leading-[0.9] mb-12 text-left">
+                <!-- Clases de tipografía para un estilo moderno y audaz. 'tracking-tighter' y 'leading-[0.9]' juntan las letras y las líneas para un look compacto. -->
                 <span class="block text-[#06bd28]">
                     Tecnologías Cloud
                 </span>
                 <span class="block text-[#fffbeb]">
                     IA y Automatización
                 </span>
+                <!-- Se usan dos <span> para poder aplicar colores diferentes a cada línea del título. -->
             </h1>
 
+            <!-- PÁRRAFO DE DESCRIPCIÓN -->
             <p class="text-xl md:text-2xl text-slate-400 font-mono max-w-3xl mb-12 leading-relaxed text-left">
+                <!-- 'font-mono': Usa una fuente monoespaciada para un look "tech". -->
+                <!-- 'max-w-3xl': Limita el ancho del párrafo para que no sea demasiado largo y sea fácil de leer. -->
                 > Innovación que transforma el futuro_
             </p>
 
+            <!-- CONTENEDOR PARA LOS BOTONES (CALL TO ACTION) -->
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-6">
-
+                <!-- BOTÓN PRINCIPAL -->
                 <button
                     class="bg-[#16f446] text-black font-bold text-lg px-8 py-4 rounded-md hover:bg-[#00ff0d] hover:scale-105 transition-all duration-200 shadow-[0_0_20px_rgba(204,255,0,0.3)]">
+                    <!-- 'hover:bg-[#00ff0d] hover:scale-105': Efectos al pasar el mouse: cambia el color de fondo y aumenta ligeramente el tamaño. -->
+                    <!-- 'transition-all duration-200': Hace que los efectos hover sean suaves. -->
+                    <!-- 'shadow-[...]': Añade una sombra de color neón que simula un brillo alrededor del botón. -->
                     Empezar a leer
                 </button>
             </div>
@@ -121,159 +146,103 @@
         </div>
     </nav>
 
+    <!-- MAIN  -->
 
-    <!-- MAIN: Contenedor principal con grid adaptable y espaciado generoso -->
-    <main class="p-8 grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
+    <main class="relative z-10 w-full">
+        <!-- SECCIÓN HISTORIA (Timeline Interactivo + Video Monitor) -->
+        <section id="historia" class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 ">
+            <div class="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- COLUMNA 1: VIDEO (Monitor Visual) -->
+                <div class="relative group order-2 lg:order-1">
+                    <!-- Efecto Glow Detrás -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-neon rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    
+                    <!-- Decoración de Esquinas "Tech" -->
+                    <div class="absolute -left-2 -top-2 w-12 h-12 border-t-2 border-l-2 border-neon rounded-tl-xl opacity-50 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute -right-2 -bottom-2 w-12 h-12 border-b-2 border-r-2 border-neon rounded-br-xl opacity-50 group-hover:opacity-100 transition-all"></div>
 
-        <!-- SECCIÓN HISTORIA: 
-             - Fondo oscuro con efecto de profundidad
-             - Borde sutil con color coordinado
-             - Efectos hover elegantes -->
-        <section id="historia"
-            class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-cyan-500/20 transition-all duration-300 hover:scale-105 hover:border-cyan-400/40 hover:shadow-2xl">
-            <!-- Título con color coordinado y estilo consistente -->
-            <h2
-                class="text-3xl font-bold mb-4 text-cyan-400 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Historia
-            </h2>
-            <!-- Párrafo con transición suave y espaciado mejorado -->
-            <p class="mb-6 text-gray-200 leading-relaxed transition-opacity duration-300 hover:opacity-90">
-                La evolución de las tecnologías Cloud, IA y automatización ha transformado radicalmente la forma en que
-                las empresas operan y las personas interactúan con la tecnología. Desde los primeros mainframes hasta la
-                computación en la nube moderna, estos avances han creado un ecosistema digital interconectado.
-            </p>
-            <!-- Video con bordes mejorados y sombras -->
-            <iframe src="https://www.youtube.com/embed/5mGuCdlCcNM"
-                class="rounded-xl shadow-lg w-full aspect-video border border-purple-500/20 transition-all duration-300 hover:border-purple-400/40"
-                allowfullscreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-            </iframe>
+                    <!-- Contenedor Video -->
+                    <div class="relative rounded-xl overflow-hidden border border-white/10 bg-black aspect-video shadow-2xl">
+                        <video loop autoplay muted playsinline class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity">
+                            <source src="assets/historia.mp4" type="video/mp4">
+                            <div class="flex items-center justify-center h-full text-slate-500 font-mono text-xs text-center p-4">
+                                [VIDEO SIGNAL LOST]<br>Check: assets/historia.mp4
+                            </div>
+                        </video>
+                        
+                        <!-- Overlay "Live Feed" -->
+                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur px-2 py-1 rounded border border-white/10 flex items-center gap-2">
+                            <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                            <span class="text-[10px] font-mono text-slate-300 tracking-widest">REC • 00:01:24</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- COLUMNA 2: TARJETAS DE INFORMACIÓN  -->
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-4xl md:text-6xl font-black text-white mb-8 flex items-center tracking-tighter">
+                        <span class="text-neon mr-4">01.</span> Evolución
+                    </h2>
+
+                    <div class="space-y-4">
+                        <!-- TARJETA 1: 1960s -->
+                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-neon/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-neon transition-opacity font-sans">60s</div>
+                            <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
+                                <span class="w-1.5 h-1.5 bg-neon rounded-full mr-3 shadow-[0_0_5px_#ccff00]"></span> 
+                                La Visión
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                J.C.R. Licklider imagina una "Red Intergaláctica". La computación deja de ser física para convertirse en un concepto abstracto de servicio público.
+                            </p>
+                        </div>
+
+                        <!-- TARJETA 2: 2006 -->
+                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-purple-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-purple-400 transition-opacity font-sans">06</div>
+                            <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
+                                <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 shadow-[0_0_5px_#c084fc]"></span> 
+                                Nace la Nube
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Lanzamiento de AWS EC2. La virtualización permite escalabilidad infinita. Las startups pueden competir globalmente sin hardware propio.
+                            </p>
+                        </div>
+
+                        <!-- TARJETA 3: HOY -->
+                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-blue-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-blue-400 transition-opacity font-sans">NOW</div>
+                            <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
+                                <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 shadow-[0_0_5px_#60a5fa]"></span> 
+                                Convergencia
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                La infraestructura se vuelve cognitiva. La IA gestiona los recursos cloud de forma autónoma, optimizando energía y latencia en tiempo real.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
-
-        <!-- SECCIÓN TIPOS: 
-             - Mismo estilo que historia pero con color diferente
-             - Lista con elementos interactivos -->
-        <section id="tipos"
-            class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-purple-500/20 transition-all duration-300 hover:scale-105 hover:border-purple-400/40 hover:shadow-2xl">
-            <h2
-                class="text-3xl font-bold mb-4 text-purple-400 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Tipos
-            </h2>
-            <!-- Lista moderna con puntos animados -->
-            <ul class="space-y-3">
-                <li class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                    <div
-                        class="w-2 h-2 bg-cyan-400 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300">
-                    </div>
-                    <span class="group-hover:text-cyan-300 transition-colors">Cloud Pública, Privada, Híbrida</span>
-                </li>
-                <li class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                    <div
-                        class="w-2 h-2 bg-purple-400 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300">
-                    </div>
-                    <span class="group-hover:text-purple-300 transition-colors">IA Generativa, Predictiva,
-                        Cognitiva</span>
-                </li>
-                <li class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                    <div
-                        class="w-2 h-2 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300">
-                    </div>
-                    <span class="group-hover:text-green-300 transition-colors">Automatización Robótica, por
-                        Software</span>
-                </li>
-            </ul>
+        <section>
+            <div>
+                <h3>Tipos</h3>
+            </div>
         </section>
-
-        <!-- SECCIÓN ÁLBUM: 
-             - Scroll horizontal con estilo moderno
-             - Imágenes con efectos -->
-        <section id="album"
-            class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-green-500/20 transition-all duration-300 hover:scale-105 hover:border-green-400/40 hover:shadow-2xl">
-            <h2
-                class="text-3xl font-bold mb-4 text-green-400 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                Aplicaciones
-            </h2>
-            <!-- Contenedor de scroll con estilos personalizados -->
-            <div
-                class="flex overflow-x-auto space-x-6 pb-4 scrollbar-thin scrollbar-thumb-cyan-400 scrollbar-track-gray-700">
-                <!-- Imágenes con contenedores mejorados y overlay -->
-                <div class="flex-shrink-0 relative group">
-                    <div
-                        class="rounded-xl shadow-lg w-56 h-32 overflow-hidden border border-cyan-500/30 transition-all duration-300 group-hover:border-cyan-400 group-hover:scale-105">
-                        <img src="" alt="Cloud Computing"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-3">
-                            <span class="text-white text-sm font-medium">Infraestructura Cloud</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-shrink-0 relative group">
-                    <div
-                        class="rounded-xl shadow-lg w-56 h-32 overflow-hidden border border-purple-500/30 transition-all duration-300 group-hover:border-purple-400 group-hover:scale-105">
-                        <img src="" alt="Inteligencia Artificial"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-3">
-                            <span class="text-white text-sm font-medium">Redes Neuronales</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-shrink-0 relative group">
-                    <div
-                        class="rounded-xl shadow-lg w-56 h-32 overflow-hidden border border-green-500/30 transition-all duration-300 group-hover:border-green-400 group-hover:scale-105">
-                        <img src="" alt="Automatización"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-3">
-                            <span class="text-white text-sm font-medium">Robótica Avanzada</span>
-                        </div>
-                    </div>
-                </div>
+        <section>
+            <div>
+                <h3>Aplicaciones</h3>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Futuro</h3>
             </div>
         </section>
 
-        <!-- SECCIÓN FUTURO: 
-             - Ocupa dos columnas en pantallas grandes
-             - Animación  -->
-        <section id="futuro"
-            class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-yellow-500/20 transition-all duration-300 hover:shadow-2xl md:col-span-2">
-            <h2
-                class="text-3xl font-bold mb-6 text-yellow-400 bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent animate-pulse">
-                Futuro
-            </h2>
 
-            <!-- Grid de tendencias futuras -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-cyan-300 mb-3">Tendencias Emergentes</h3>
-                    <ul class="space-y-2">
-                        <li
-                            class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                            <div
-                                class="w-2 h-2 bg-cyan-400 rounded-full mr-3 group-hover:scale-150 transition-transform">
-                            </div>
-                            <span>Computación Cuántica en la Nube</span>
-                        </li>
-                        <li
-                            class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                            <div
-                                class="w-2 h-2 bg-purple-400 rounded-full mr-3 group-hover:scale-150 transition-transform">
-                            </div>
-                            <span>IA Explicable y Ética</span>
-                        </li>
-                        <li
-                            class="flex items-center text-gray-200 transition-all duration-300 hover:translate-x-2 group">
-                            <div
-                                class="w-2 h-2 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform">
-                            </div>
-                            <span>Automatización Hiperinteligente</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- FOOTER -->
