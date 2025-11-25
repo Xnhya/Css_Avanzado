@@ -18,7 +18,7 @@
 
     <header id="header"
         class="relative w-full min-h-screen flex items-center px-6 md:px-20 bg-[#1a1919] border-b border-white/10 overflow-hidden">
-        <!-- DIV PARA EL EFECTO DE RESPLANDOR (GLOW) EN EL FONDO -->
+        <!-- DIV PARA EL EFECTO DE GLOW EN EL FONDO -->
         <div
             class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[#ccff00] opacity-[0.03] blur-[120px] pointer-events-none">
         </div>
@@ -136,27 +136,37 @@
         <!-- SECCIÓN HISTORIA (Timeline Interactivo + Video Monitor) -->
         <section id="historia" class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 ">
             <div class="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
+
                 <!-- COLUMNA 1: VIDEO (Monitor Visual) -->
                 <div class="relative group order-2 lg:order-1">
                     <!-- Efecto Glow Detrás -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-neon rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                    
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-neon rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                    </div>
+
                     <!-- Decoración de Esquinas "Tech" -->
-                    <div class="absolute -left-2 -top-2 w-12 h-12 border-t-2 border-l-2 border-neon rounded-tl-xl opacity-50 group-hover:opacity-100 transition-all"></div>
-                    <div class="absolute -right-2 -bottom-2 w-12 h-12 border-b-2 border-r-2 border-neon rounded-br-xl opacity-50 group-hover:opacity-100 transition-all"></div>
+                    <div
+                        class="absolute -left-2 -top-2 w-12 h-12 border-t-2 border-l-2 border-neon rounded-tl-xl opacity-50 group-hover:opacity-100 transition-all">
+                    </div>
+                    <div
+                        class="absolute -right-2 -bottom-2 w-12 h-12 border-b-2 border-r-2 border-neon rounded-br-xl opacity-50 group-hover:opacity-100 transition-all">
+                    </div>
 
                     <!-- Contenedor Video -->
-                    <div class="relative rounded-xl overflow-hidden border border-white/10 bg-black aspect-video shadow-2xl">
-                        <video loop autoplay muted playsinline class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity">
-                            <source src="assets/historia.mp4" type="video/mp4">
-                            <div class="flex items-center justify-center h-full text-slate-500 font-mono text-xs text-center p-4">
+                    <div
+                        class="relative rounded-xl overflow-hidden border border-white/10 bg-black aspect-video shadow-2xl">
+                        <video loop autoplay muted playsinline
+                            class="w-full h-full object-cover pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity">
+                            <source src="assets/vid/historia.mp4" type="video/mp4">
+                            <div
+                                class="flex items-center justify-center h-full text-slate-500 font-mono text-xs text-center p-4">
                                 [VIDEO SIGNAL LOST]<br>Check: assets/historia.mp4
                             </div>
                         </video>
-                        
+
                         <!-- Overlay "Live Feed" -->
-                        <div class="absolute top-4 left-4 bg-black/60 backdrop-blur px-2 py-1 rounded border border-white/10 flex items-center gap-2">
+                        <div
+                            class="absolute top-4 left-4 bg-black/60 backdrop-blur px-2 py-1 rounded border border-white/10 flex items-center gap-2">
                             <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                             <span class="text-[10px] font-mono text-slate-300 tracking-widest">REC • 00:01:24</span>
                         </div>
@@ -171,38 +181,51 @@
 
                     <div class="space-y-4">
                         <!-- TARJETA 1: 1960s -->
-                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-neon/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
-                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-neon transition-opacity font-sans">60s</div>
+                        <div
+                            class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-neon/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div
+                                class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-neon transition-opacity font-sans">
+                                60s</div>
                             <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
-                                <span class="w-1.5 h-1.5 bg-neon rounded-full mr-3 shadow-[0_0_5px_#ccff00]"></span> 
+                                <span class="w-1.5 h-1.5 bg-neon rounded-full mr-3 shadow-[0_0_5px_#ccff00]"></span>
                                 La Visión
                             </h3>
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                J.C.R. Licklider imagina una "Red Intergaláctica". La computación deja de ser física para convertirse en un concepto abstracto de servicio público.
+                                J.C.R. Licklider imagina una "Red Intergaláctica". La computación deja de ser física
+                                para convertirse en un concepto abstracto de servicio público.
                             </p>
                         </div>
 
                         <!-- TARJETA 2: 2006 -->
-                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-purple-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
-                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-purple-400 transition-opacity font-sans">06</div>
+                        <div
+                            class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-purple-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div
+                                class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-purple-400 transition-opacity font-sans">
+                                06</div>
                             <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
-                                <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 shadow-[0_0_5px_#c084fc]"></span> 
+                                <span
+                                    class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 shadow-[0_0_5px_#c084fc]"></span>
                                 Nace la Nube
                             </h3>
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                Lanzamiento de AWS EC2. La virtualización permite escalabilidad infinita. Las startups pueden competir globalmente sin hardware propio.
+                                Lanzamiento de AWS EC2. La virtualización permite escalabilidad infinita. Las startups
+                                pueden competir globalmente sin hardware propio.
                             </p>
                         </div>
 
                         <!-- TARJETA 3: HOY -->
-                        <div class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-blue-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
-                            <div class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-blue-400 transition-opacity font-sans">NOW</div>
+                        <div
+                            class="group/card p-6 rounded-xl bg-surface border border-white/10 hover:border-blue-400/50 hover:bg-white/5 transition-all duration-300 hover:-translate-x-2 relative overflow-hidden cursor-default">
+                            <div
+                                class="absolute top-0 right-0 p-3 opacity-10 group-hover/card:opacity-20 text-5xl font-black text-blue-400 transition-opacity font-sans">
+                                NOW</div>
                             <h3 class="text-lg font-bold text-white mb-2 flex items-center font-mono">
-                                <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 shadow-[0_0_5px_#60a5fa]"></span> 
+                                <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 shadow-[0_0_5px_#60a5fa]"></span>
                                 Convergencia
                             </h3>
                             <p class="text-slate-300 text-sm leading-relaxed">
-                                La infraestructura se vuelve cognitiva. La IA gestiona los recursos cloud de forma autónoma, optimizando energía y latencia en tiempo real.
+                                La infraestructura se vuelve cognitiva. La IA gestiona los recursos cloud de forma
+                                autónoma, optimizando energía y latencia en tiempo real.
                             </p>
                         </div>
                     </div>
@@ -211,11 +234,13 @@
         </section>
 
         <!-- SECCIÓN TIPOS (Arquitectura de Servicios Cloud) -->
-        <section id="tipos" class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-purple-900/30">
+        <section id="tipos"
+            class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-purple-900/30">
             <div class="w-full max-w-7xl">
                 <!-- TÍTULO DE SECCIÓN -->
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
+                    <h2
+                        class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
                         <span class="text-blue-400 mr-4">02.</span> Arquitecturas
                     </h2>
                     <p class="text-xl text-slate-400 font-mono max-w-2xl mx-auto">
@@ -225,26 +250,31 @@
 
                 <!-- GRID DE TIPOS DE CLOUD -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
+
                     <!-- TIPO 1: PÚBLICA -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-blue-900/30 border border-white/10 rounded-2xl p-8 hover:border-blue-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-blue-900/30 border border-white/10 rounded-2xl p-8 hover:border-blue-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex flex-col items-center text-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                            <div
+                                class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
                                 <span class="text-2xl">🌐</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white font-mono">Pública</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-center mb-6">
-                                Infraestructura compartida, pago por uso. Ideal para startups y proyectos con demanda variable.
+                                Infraestructura compartida, pago por uso. Ideal para startups y proyectos con demanda
+                                variable.
                             </p>
-                            
+
                             <!-- Ejemplos -->
                             <div class="bg-black/30 rounded-lg p-4 border border-white/5">
                                 <h4 class="text-blue-300 font-mono text-sm mb-2">EJEMPLOS:</h4>
@@ -258,62 +288,78 @@
                     </div>
 
                     <!-- TIPO 2: PRIVADA -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-purple-900/30 border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-purple-900/30 border border-white/10 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex flex-col items-center text-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
+                            <div
+                                class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/30 transition-colors">
                                 <span class="text-2xl">🏢</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white font-mono">Privada</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-center mb-6">
-                                Infraestructura exclusiva, mayor control y seguridad. Para empresas con requisitos de compliance estrictos.
+                                Infraestructura exclusiva, mayor control y seguridad. Para empresas con requisitos de
+                                compliance estrictos.
                             </p>
-                            
+
                             <!-- Ejemplos -->
                             <div class="bg-black/30 rounded-lg p-4 border border-white/5">
                                 <h4 class="text-purple-300 font-mono text-sm mb-2">EJEMPLOS:</h4>
                                 <div class="flex flex-wrap gap-2 justify-center">
-                                    <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">VMware</span>
-                                    <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">OpenStack</span>
-                                    <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Azure Stack</span>
+                                    <span
+                                        class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">VMware</span>
+                                    <span
+                                        class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">OpenStack</span>
+                                    <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Azure
+                                        Stack</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- TIPO 3: HÍBRIDA -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-green-900/30 border border-white/10 rounded-2xl p-8 hover:border-green-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-green-900/30 border border-white/10 rounded-2xl p-8 hover:border-green-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex flex-col items-center text-center mb-6">
-                            <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                            <div
+                                class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
                                 <span class="text-2xl">🔀</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white font-mono">Híbrida</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-center mb-6">
-                                Combina nube pública y privada. Flexibilidad para mover cargas de trabajo según costos, seguridad y rendimiento.
+                                Combina nube pública y privada. Flexibilidad para mover cargas de trabajo según costos,
+                                seguridad y rendimiento.
                             </p>
-                            
+
                             <!-- Ejemplos -->
                             <div class="bg-black/30 rounded-lg p-4 border border-white/5">
                                 <h4 class="text-green-300 font-mono text-sm mb-2">EJEMPLOS:</h4>
                                 <div class="flex flex-wrap gap-2 justify-center">
-                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">AWS Outposts</span>
-                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Azure Arc</span>
-                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Google Anthos</span>
+                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">AWS
+                                        Outposts</span>
+                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Azure
+                                        Arc</span>
+                                    <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Google
+                                        Anthos</span>
                                 </div>
                             </div>
                         </div>
@@ -323,11 +369,13 @@
         </section>
 
         <!-- SECCIÓN APLICACIONES (Casos de Uso) -->
-        <section id="aplicaciones" class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-cyan-900/30">
+        <section id="aplicaciones"
+            class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-cyan-900/30">
             <div class="w-full max-w-7xl">
                 <!-- TÍTULO DE SECCIÓN -->
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
+                    <h2
+                        class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
                         <span class="text-cyan-400 mr-4">03.</span> Aplicaciones
                     </h2>
                     <p class="text-xl text-slate-400 font-mono max-w-2xl mx-auto">
@@ -337,15 +385,19 @@
 
                 <!-- GRID DE APLICACIONES -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    
+
                     <!-- APLICACIÓN 1: IA Y MACHINE LEARNING -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-cyan-900/30 border border-white/10 rounded-2xl p-8 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-cyan-900/30 border border-white/10 rounded-2xl p-8 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex items-start mb-6">
-                            <div class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 group-hover:bg-cyan-500/30 transition-colors">
+                            <div
+                                class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 group-hover:bg-cyan-500/30 transition-colors">
                                 <span class="text-xl">🧠</span>
                             </div>
                             <div>
@@ -353,13 +405,14 @@
                                 <p class="text-cyan-300 font-mono text-sm">Procesamiento de datos a escala</p>
                             </div>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 mb-6">
-                                Entrenamiento de modelos de IA con grandes volúmenes de datos. Análisis predictivo y procesamiento de lenguaje natural en tiempo real.
+                                Entrenamiento de modelos de IA con grandes volúmenes de datos. Análisis predictivo y
+                                procesamiento de lenguaje natural en tiempo real.
                             </p>
-                            
+
                             <!-- Casos de uso -->
                             <div class="space-y-3">
                                 <div class="flex items-center">
@@ -379,13 +432,17 @@
                     </div>
 
                     <!-- APLICACIÓN 2: INTERNET DE LAS COSAS -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-orange-900/30 border border-white/10 rounded-2xl p-8 hover:border-orange-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-orange-900/30 border border-white/10 rounded-2xl p-8 hover:border-orange-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex items-start mb-6">
-                            <div class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
+                            <div
+                                class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center mr-4 group-hover:bg-orange-500/30 transition-colors">
                                 <span class="text-xl">📱</span>
                             </div>
                             <div>
@@ -393,25 +450,29 @@
                                 <p class="text-orange-300 font-mono text-sm">Conectando dispositivos inteligentes</p>
                             </div>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 mb-6">
-                                Gestión de millones de dispositivos conectados. Procesamiento de telemetría y automatización de sistemas en tiempo real.
+                                Gestión de millones de dispositivos conectados. Procesamiento de telemetría y
+                                automatización de sistemas en tiempo real.
                             </p>
-                            
+
                             <!-- Casos de uso -->
                             <div class="space-y-3">
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
                                     <span class="text-slate-300 text-sm">Ciudades inteligentes y tráfico</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
                                     <span class="text-slate-300 text-sm">Agricultura de precisión</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-orange-400 rounded-full mr-3 shadow-[0_0_5px_#fb923c]"></span>
                                     <span class="text-slate-300 text-sm">Monitoreo de salud remoto</span>
                                 </div>
                             </div>
@@ -419,13 +480,17 @@
                     </div>
 
                     <!-- APLICACIÓN 3: STREAMING Y ENTRETENIMIENTO -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-pink-900/30 border border-white/10 rounded-2xl p-8 hover:border-pink-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-pink-900/30 border border-white/10 rounded-2xl p-8 hover:border-pink-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex items-start mb-6">
-                            <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center mr-4 group-hover:bg-pink-500/30 transition-colors">
+                            <div
+                                class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center mr-4 group-hover:bg-pink-500/30 transition-colors">
                                 <span class="text-xl">🎬</span>
                             </div>
                             <div>
@@ -433,13 +498,14 @@
                                 <p class="text-pink-300 font-mono text-sm">Contenido global bajo demanda</p>
                             </div>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 mb-6">
-                                Distribución de contenido multimedia a escala global. Transcodificación en tiempo real y recomendaciones personalizadas.
+                                Distribución de contenido multimedia a escala global. Transcodificación en tiempo real y
+                                recomendaciones personalizadas.
                             </p>
-                            
+
                             <!-- Casos de uso -->
                             <div class="space-y-3">
                                 <div class="flex items-center">
@@ -459,13 +525,17 @@
                     </div>
 
                     <!-- APLICACIÓN 4: CIENCIA DE DATOS -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-indigo-900/30 border border-white/10 rounded-2xl p-8 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-indigo-900/30 border border-white/10 rounded-2xl p-8 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Icono y título -->
                         <div class="relative z-10 flex items-start mb-6">
-                            <div class="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center mr-4 group-hover:bg-indigo-500/30 transition-colors">
+                            <div
+                                class="w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center mr-4 group-hover:bg-indigo-500/30 transition-colors">
                                 <span class="text-xl">📊</span>
                             </div>
                             <div>
@@ -473,25 +543,29 @@
                                 <p class="text-indigo-300 font-mono text-sm">Análisis avanzado y visualización</p>
                             </div>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 mb-6">
-                                Procesamiento de big data, análisis predictivo y visualización interactiva. Entornos colaborativos para equipos de datos.
+                                Procesamiento de big data, análisis predictivo y visualización interactiva. Entornos
+                                colaborativos para equipos de datos.
                             </p>
-                            
+
                             <!-- Casos de uso -->
                             <div class="space-y-3">
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
                                     <span class="text-slate-300 text-sm">Análisis de mercado financiero</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
                                     <span class="text-slate-300 text-sm">Investigación climática</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
+                                    <span
+                                        class="w-2 h-2 bg-indigo-400 rounded-full mr-3 shadow-[0_0_5px_#818cf8]"></span>
                                     <span class="text-slate-300 text-sm">Optimización de cadenas de suministro</span>
                                 </div>
                             </div>
@@ -502,11 +576,13 @@
         </section>
 
         <!-- SECCIÓN FUTURO (Tendencias y Predicciones) -->
-        <section id="futuro" class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-violet-900/30">
+        <section id="futuro"
+            class="relative w-full min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-slate-900/50 to-violet-900/30">
             <div class="w-full max-w-7xl">
                 <!-- TÍTULO DE SECCIÓN -->
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
+                    <h2
+                        class="text-4xl md:text-6xl font-black text-white mb-4 flex items-center justify-center tracking-tighter">
                         <span class="text-violet-400 mr-4">04.</span> Futuro
                     </h2>
                     <p class="text-xl text-slate-400 font-mono max-w-2xl mx-auto">
@@ -516,24 +592,28 @@
 
                 <!-- GRID DE TENDENCIAS -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
+
                     <!-- TENDENCIA 1: EDGE COMPUTING -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-violet-900/30 border border-white/10 rounded-2xl p-6 hover:border-violet-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-violet-900/30 border border-white/10 rounded-2xl p-6 hover:border-violet-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-violet-400 font-black text-4xl mb-2">01</div>
                             <h3 class="text-xl font-bold text-white font-mono">Edge Computing</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Procesamiento descentralizado en el origen de los datos. Reduce latencia para aplicaciones en tiempo real como vehículos autónomos.
+                                Procesamiento descentralizado en el origen de los datos. Reduce latencia para
+                                aplicaciones en tiempo real como vehículos autónomos.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-violet-300 font-mono">
                                 <span>IMPACTO: 2024-2027</span>
@@ -542,22 +622,26 @@
                     </div>
 
                     <!-- TENDENCIA 2: SERVERLESS ARCHITECTURE -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-fuchsia-900/30 border border-white/10 rounded-2xl p-6 hover:border-fuchsia-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-fuchsia-900/30 border border-white/10 rounded-2xl p-6 hover:border-fuchsia-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-fuchsia-400 font-black text-4xl mb-2">02</div>
                             <h3 class="text-xl font-bold text-white font-mono">Serverless</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Abstracción completa de la infraestructura. Los desarrolladores se enfocan solo en el código mientras la nube gestiona el escalado automático.
+                                Abstracción completa de la infraestructura. Los desarrolladores se enfocan solo en el
+                                código mientras la nube gestiona el escalado automático.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-fuchsia-300 font-mono">
                                 <span>IMPACTO: 2023-2026</span>
@@ -566,22 +650,26 @@
                     </div>
 
                     <!-- TENDENCIA 3: QUANTUM COMPUTING -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-cyan-900/30 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-cyan-900/30 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-cyan-400 font-black text-4xl mb-2">03</div>
                             <h3 class="text-xl font-bold text-white font-mono">Quantum Cloud</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Computación cuántica como servicio. Resolución de problemas complejos intratables para computadoras clásicas, como descubrimiento de fármacos.
+                                Computación cuántica como servicio. Resolución de problemas complejos intratables para
+                                computadoras clásicas, como descubrimiento de fármacos.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-cyan-300 font-mono">
                                 <span>IMPACTO: 2026-2030</span>
@@ -590,22 +678,26 @@
                     </div>
 
                     <!-- TENDENCIA 4: SUSTAINABLE CLOUD -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-emerald-900/30 border border-white/10 rounded-2xl p-6 hover:border-emerald-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-emerald-900/30 border border-white/10 rounded-2xl p-6 hover:border-emerald-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-emerald-400 font-black text-4xl mb-2">04</div>
                             <h3 class="text-xl font-bold text-white font-mono">Cloud Sostenible</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Centros de datos con energía 100% renovable. Optimización de recursos para reducir la huella de carbono de la computación digital.
+                                Centros de datos con energía 100% renovable. Optimización de recursos para reducir la
+                                huella de carbono de la computación digital.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-emerald-300 font-mono">
                                 <span>IMPACTO: 2025-2028</span>
@@ -614,22 +706,26 @@
                     </div>
 
                     <!-- TENDENCIA 5: AI-OPS -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-amber-900/30 border border-white/10 rounded-2xl p-6 hover:border-amber-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-amber-900/30 border border-white/10 rounded-2xl p-6 hover:border-amber-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-amber-400 font-black text-4xl mb-2">05</div>
                             <h3 class="text-xl font-bold text-white font-mono">AI-Ops</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Operaciones de TI automatizadas mediante IA. Autodiagnóstico, autoescalado y autorreparación de infraestructura cloud.
+                                Operaciones de TI automatizadas mediante IA. Autodiagnóstico, autoescalado y
+                                autorreparación de infraestructura cloud.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-amber-300 font-mono">
                                 <span>IMPACTO: 2024-2027</span>
@@ -638,22 +734,26 @@
                     </div>
 
                     <!-- TENDENCIA 6: MULTICLOUD -->
-                    <div class="group relative bg-gradient-to-br from-slate-800/50 to-rose-900/30 border border-white/10 rounded-2xl p-6 hover:border-rose-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div
+                        class="group relative bg-gradient-to-br from-slate-800/50 to-rose-900/30 border border-white/10 rounded-2xl p-6 hover:border-rose-400/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                         <!-- Efecto de brillo al pasar el mouse -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-rose-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-rose-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <!-- Número y título -->
                         <div class="relative z-10 mb-4">
                             <div class="text-rose-400 font-black text-4xl mb-2">06</div>
                             <h3 class="text-xl font-bold text-white font-mono">Multicloud</h3>
                         </div>
-                        
+
                         <!-- Descripción -->
                         <div class="relative z-10">
                             <p class="text-slate-300 text-sm mb-4">
-                                Estrategias que combinan múltiples proveedores de nube. Evita vendor lock-in y optimiza costos mediante portabilidad de cargas.
+                                Estrategias que combinan múltiples proveedores de nube. Evita vendor lock-in y optimiza
+                                costos mediante portabilidad de cargas.
                             </p>
-                            
+
                             <!-- Timeline -->
                             <div class="flex items-center text-xs text-rose-300 font-mono">
                                 <span>IMPACTO: 2023-2026</span>
@@ -665,7 +765,7 @@
                 <!-- CTA FINAL -->
                 <div class="text-center mt-16">
                     <p class="text-slate-400 font-mono text-lg mb-8">¿Listo para seguir construyendo el futuro?</p>
-                    
+
                 </div>
             </div>
         </section>
