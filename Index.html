@@ -679,7 +679,6 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-violet-300 font-mono">IMPACTO: 2024-2027</span>
-                                <span class="text-slate-500">▲ +320%</span>
                             </div>
                         </div>
                     </div>
@@ -731,7 +730,6 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-fuchsia-300 font-mono">IMPACTO: 2023-2026</span>
-                                <span class="text-slate-500">▲ +280%</span>
                             </div>
                         </div>
                     </div>
@@ -782,7 +780,6 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-cyan-300 font-mono">IMPACTO: 2026-2030</span>
-                                <span class="text-slate-500">⏳ EMERGING</span>
                             </div>
                         </div>
                     </div>
@@ -834,7 +831,7 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-emerald-300 font-mono">IMPACTO: 2025-2028</span>
-                                <span class="text-slate-500">▲ +150%</span>
+                                
                             </div>
                         </div>
                     </div>
@@ -885,7 +882,7 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-amber-300 font-mono">IMPACTO: 2024-2027</span>
-                                <span class="text-slate-500">▲ +420%</span>
+                                
                             </div>
                         </div>
                     </div>
@@ -936,7 +933,7 @@
 
                             <div class="flex items-center justify-between text-xs">
                                 <span class="text-rose-300 font-mono">IMPACTO: 2023-2026</span>
-                                <span class="text-slate-500">▲ +380%</span>
+                                
                             </div>
                         </div>
                     </div>
@@ -979,55 +976,82 @@
     </footer>
 
     <!-- SCRIPT PARA EL CARRUSEL -->
-    <script>
-        // Esperamos a que todo el HTML se haya cargado antes de ejecutar el código
-        document.addEventListener('DOMContentLoaded', () => {
+   <script>
+    // Esperamos a que todo el HTML se haya cargado antes de ejecutar el código
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        
+        // CÓDIGO PARA EL CARRUSEL DE APLICACIONES
+        
+        
+        // 1. VARIABLES DE ESTADO DEL CARRUSEL
+        // 'current' rastrea en qué diapositiva estamos (empieza en la 0, la primera)
+        let current = 0;
 
-            // 1. VARIABLES DE ESTADO
-            // 'current' rastrea en qué diapositiva estamos (empieza en la 0, la primera)
-            let current = 0;
+        // Seleccionamos todas las tarjetas (divs) dentro del contenedor #carousel
+        // Esto nos permite saber cuántas hay (length) y dónde están ubicadas (offsetLeft)
+        const slides = document.querySelectorAll('#carousel > div');
 
-            // Seleccionamos todas las tarjetas (divs) dentro del contenedor #carousel
-            // Esto nos permite saber cuántas hay (length) y dónde están ubicadas (offsetLeft)
-            const slides = document.querySelectorAll('#carousel > div');
+        // Seleccionamos el contenedor principal que se desliza
+        const carousel = document.getElementById('carousel');
 
-            // Seleccionamos el contenedor principal que se desliza
-            // Nota: Los navegadores modernos crean una variable global con el ID, 
-            // pero es buena práctica definirla: const carousel = document.getElementById('carousel');
+        // 2. FUNCIÓN BOTÓN SIGUIENTE
+        document.getElementById('nextBtn').onclick = () => {
+            // CÁLCULO DEL ÍNDICE :
+            // (current + 1) % slides.length
+            // El operador % (módulo) hace que si llegamos al final (índice 4), 
+            // 4 % 4 = 0. Regresa al principio
+            current = (current + 1) % slides.length;
 
-            // 2. FUNCIÓN BOTÓN SIGUIENTE
-            document.getElementById('nextBtn').onclick = () => {
-                // CÁLCULO DEL ÍNDICE :
-                // (current + 1) % slides.length
-                // El operador % (módulo) hace que si llegamos al final (índice 4), 
-                // 4 % 4 = 0. Regresal al principio
-                current = (current + 1) % slides.length;
+            // MOVER EL SCROLL:
+            // Buscamos la posición izquierda (.offsetLeft) de la tarjeta actual
+            // y le decimos al contenedor que se desplace suavemente hacia allí.
+            carousel.scrollTo({
+                left: slides[current].offsetLeft,
+                behavior: 'smooth'
+            });
+        };
 
-                // MOVER EL SCROLL:
-                // Buscamos la posición izquierda (.offsetLeft) de la tarjeta actual
-                // y le decimos al contenedor que se desplace suavemente hacia allí.
-                carousel.scrollTo({
-                    left: slides[current].offsetLeft,
-                    behavior: 'smooth'
-                });
-            };
+        // 3. FUNCIÓN BOTÓN ANTERIOR
+        document.getElementById('prevBtn').onclick = () => {
+            // CÁLCULO DEL ÍNDICE (Truco para ir hacia atrás):
+            // Sumamos el total de slides antes de restar para evitar números negativos.
+            // Si estamos en 0: (0 - 1 + 4) = 3. El resto de 3 entre 4 es 3.
+            // Nos lleva a la última diapositiva.
+            current = (current - 1 + slides.length) % slides.length;
 
-            // 3. FUNCIÓN BOTÓN ANTERIOR
-            document.getElementById('prevBtn').onclick = () => {
-                // CÁLCULO DEL ÍNDICE (Truco para ir hacia atrás):
-                // Sumamos el total de slides antes de restar para evitar números negativos.
-                // Si estamos en 0: (0 - 1 + 4) = 3. El resto de 3 entre 4 es 3.
-                // Nos lleva a la última diapositiva.
-                current = (current - 1 + slides.length) % slides.length;
+            // MOVER EL SCROLL
+            carousel.scrollTo({
+                left: slides[current].offsetLeft,
+                behavior: 'smooth'
+            });
+        };
 
-                // MOVER EL SCROLL
-                carousel.scrollTo({
-                    left: slides[current].offsetLeft,
-                    behavior: 'smooth'
-                });
-            };
+        
+        // CÓDIGO PARA LOS VIDEOS
+      
+        // Seleccionar todos los videos en la sección futuro
+        const videos = document.querySelectorAll('#futuro video');
+        
+        // Para cada video, agregar eventos de mouse
+        videos.forEach(video => {
+            // Pausar todos los videos al cargar la página
+            video.pause();
+            
+            // Reproducir cuando el mouse entra en la tarjeta
+            video.closest('.group').addEventListener('mouseenter', () => {
+                video.play().catch(e => console.log('Error al reproducir video:', e));
+            });
+            
+            // Pausar cuando el mouse sale de la tarjeta
+            video.closest('.group').addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Reiniciar al principio
+            });
         });
-    </script>
+
+    });
+</script>
 
 </body>
 
