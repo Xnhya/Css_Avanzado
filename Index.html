@@ -43,9 +43,11 @@
             <!-- CONTENEDOR PARA LOS BOTONES (CALL TO ACTION) -->
             <div class="flex flex-col sm:flex-row items-center sm:items-start justify-start gap-6">
                 <!-- BOTÓN PRINCIPAL -->
-                <button
-                    class="bg-cyan-600 text-black font-bold text-lg px-8 py-4 rounded-md hover:bg-cyan-500 hover:scale-105 transition-all duration-200 ">
-                    Empezar a leer
+                <button>
+                    <a href="#historia"
+                        class="hidden md:flex items-center gap-2 px-8 py-6 bg-gray-800 hover:bg-gray-700  text-white rounded-full text-2xl font-bold font-mono transition-all group">
+                        <span>Empezar a leer</span>
+                    </a>
                 </button>
             </div>
         </div>
@@ -56,9 +58,9 @@
         class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-dark/70 backdrop-blur-xl transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 md:px-20 h-20 flex items-center justify-between">
 
-            <!-- LOGO DIVERTIDO: Gira 360 grados al pasar el mouse -->
+            <!-- LOGO GIRATORIO : Gira 360 grados al pasar el mouse -->
             <a href="#header" class="group flex items-center gap-3 cursor-pointer">
-                <!-- Contenedor del icono más grande con mejores efectos -->
+                <!-- Contenedor del icono  -->
                 <div
                     class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full border-2 border-cyan-400/30 group-hover:border-cyan-400 group-hover:rotate-[360deg] transition-all duration-700 ease-out shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 ">
                     <!-- Imagen del icono  -->
@@ -69,7 +71,7 @@
 
                 <!-- Texto del logo  -->
                 <span class="text-white font-bold text-lg  font-mono group-hover:text-cyan-300">
-                    Cloud_Tech
+                    PROYECTO CSS_
                 </span>
             </a>
 
@@ -128,11 +130,13 @@
             </ul>
 
             <!-- CTA BUTTON: El cohete rebota al pasar el mouse -->
-            <a href="https://github.com/Xnhya/Css_Avanzado " target="_blank"
-                class="hidden md:flex items-center gap-2 px-5 py-2 bg-neon text-white rounded-full text-xs font-bold font-mono hover:bg-blue-600 ">
-                <span>Git Push</span>
-                <span class="group-hover:animate-bounce">🚀</span>
-            </a>
+            <button>
+                <a href="https://github.com/Xnhya/Css_Avanzado" target="_blank"
+                    class="hidden md:flex items-center gap-2 px-5 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-600 text-white rounded-full text-xs font-bold font-mono transition-all group">
+                    <span>Git Push</span>
+                    <span class="group-hover:animate-bounce transition-transform">🚀</span>
+                </a>
+            </button>
         </div>
     </nav>
 
@@ -818,12 +822,52 @@
 
     <!-- SCRIPT PARA EL CARRUSEL -->
     <script>
+        // Esperamos a que todo el HTML se haya cargado antes de ejecutar el código
         document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. VARIABLES DE ESTADO
+            // 'current' rastrea en qué diapositiva estamos (empieza en la 0, la primera)
             let current = 0;
+
+            // Seleccionamos todas las tarjetas (divs) dentro del contenedor #carousel
+            // Esto nos permite saber cuántas hay (length) y dónde están ubicadas (offsetLeft)
             const slides = document.querySelectorAll('#carousel > div');
 
-            document.getElementById('nextBtn').onclick = () => carousel.scrollTo({ left: slides[current = (current + 1) % slides.length].offsetLeft, behavior: 'smooth' });
-            document.getElementById('prevBtn').onclick = () => carousel.scrollTo({ left: slides[current = (current - 1 + slides.length) % slides.length].offsetLeft, behavior: 'smooth' });
+            // Seleccionamos el contenedor principal que se desliza
+            // Nota: Los navegadores modernos crean una variable global con el ID, 
+            // pero es buena práctica definirla: const carousel = document.getElementById('carousel');
+
+            // 2. FUNCIÓN BOTÓN SIGUIENTE
+            document.getElementById('nextBtn').onclick = () => {
+                // CÁLCULO DEL ÍNDICE :
+                // (current + 1) % slides.length
+                // El operador % (módulo) hace que si llegamos al final (índice 4), 
+                // 4 % 4 = 0. Regresal al principio
+                current = (current + 1) % slides.length;
+
+                // MOVER EL SCROLL:
+                // Buscamos la posición izquierda (.offsetLeft) de la tarjeta actual
+                // y le decimos al contenedor que se desplace suavemente hacia allí.
+                carousel.scrollTo({
+                    left: slides[current].offsetLeft,
+                    behavior: 'smooth'
+                });
+            };
+
+            // 3. FUNCIÓN BOTÓN ANTERIOR
+            document.getElementById('prevBtn').onclick = () => {
+                // CÁLCULO DEL ÍNDICE (Truco para ir hacia atrás):
+                // Sumamos el total de slides antes de restar para evitar números negativos.
+                // Si estamos en 0: (0 - 1 + 4) = 3. El resto de 3 entre 4 es 3.
+                // Nos lleva a la última diapositiva.
+                current = (current - 1 + slides.length) % slides.length;
+
+                // MOVER EL SCROLL
+                carousel.scrollTo({
+                    left: slides[current].offsetLeft,
+                    behavior: 'smooth'
+                });
+            };
         });
     </script>
 
