@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="scroll-smooth">
 
 <head>
@@ -374,9 +373,9 @@
             </div>
         </section>
 
+        <!-- SECCIÓN APLICACIONES (Carrusel Interactivo) -->
         <section id="aplicaciones"
             class="relative w-full min-h-screen flex flex-col justify-center px-4 py-20 bg-gradient-to-br from-slate-900/50 to-cyan-900/30 overflow-hidden">
-
 
             <div class="w-full max-w-7xl mx-auto relative z-10">
 
@@ -390,202 +389,221 @@
                     </p>
                 </div>
 
-                <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 cursor-grab active:cursor-grabbing">
-
-                    <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
-
-                        <div
-                            class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-cyan-900/20">
-
-                            <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                                <img src="assets/img/1.jpg"
-                                    alt="Inteligencia Artificial"
-                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <!-- CONTENEDOR DEL CARRUSEL -->
+                <div class="relative">
+                    <!-- CARRUSEL - SE AGREGÓ LA CLASE [scrollbar-width:none] PARA OCULTAR LA BARRA -->
+                    <div id="carousel"
+                        class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scroll-smooth [scrollbar-width:none]">
+                        <!-- SLIDE 1: IA & Machine Learning -->
+                        <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
+                            <div
+                                class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-cyan-900/20">
+                                <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                                    <img src="assets/img/1.jpg" alt="Inteligencia Artificial"
+                                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
+                                    </div>
+                                </div>
                                 <div
-                                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
+                                    class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center text-2xl">
+                                            🧠</div>
+                                        <div>
+                                            <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">IA & Machine
+                                                Learning</h3>
+                                            <p class="text-cyan-400 text-sm font-mono tracking-wider">PROCESAMIENTO
+                                                NEURONAL
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-300 mb-8 leading-relaxed">
+                                        Entrenamiento de modelos masivos y redes neuronales. Implementamos soluciones de
+                                        visión por computadora y NLP para automatizar decisiones críticas en tiempo
+                                        real.
+                                    </p>
+                                    <div class="space-y-3 font-mono text-sm text-slate-400">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_#22d3ee]"></span>
+                                            <span>Reconocimiento biométrico avanzado</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_#22d3ee]"></span>
+                                            <span>Análisis predictivo de mercados</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- SLIDE 2: IoT & Conectividad -->
+                        <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
                             <div
-                                class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
-                                <div class="flex items-center gap-4 mb-6">
+                                class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-orange-900/20">
+                                <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                                    <img src="assets/img/2.jpg" alt="IoT"
+                                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                     <div
-                                        class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center text-2xl">
-                                        🧠</div>
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">IA & Machine
-                                            Learning</h3>
-                                        <p class="text-cyan-400 text-sm font-mono tracking-wider">PROCESAMIENTO NEURONAL
-                                        </p>
+                                        class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
                                     </div>
                                 </div>
-                                <p class="text-slate-300 mb-8 leading-relaxed">
-                                    Entrenamiento de modelos masivos y redes neuronales. Implementamos soluciones de
-                                    visión por computadora y NLP para automatizar decisiones críticas en tiempo real.
-                                </p>
-                                <div class="space-y-3 font-mono text-sm text-slate-400">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_#22d3ee]"></span>
-                                        <span>Reconocimiento biométrico avanzado</span>
+                                <div
+                                    class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-2xl">
+                                            📡</div>
+                                        <div>
+                                            <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">IoT &
+                                                Conectividad</h3>
+                                            <p class="text-orange-400 text-sm font-mono tracking-wider">REDES
+                                                INTELIGENTES
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_#22d3ee]"></span>
-                                        <span>Análisis predictivo de mercados</span>
+                                    <p class="text-slate-300 mb-8 leading-relaxed">
+                                        Gestión de flotas de dispositivos y telemetría industrial. Conectamos el mundo
+                                        físico con la nube mediante protocolos MQTT y Edge Computing de baja latencia.
+                                    </p>
+                                    <div class="space-y-3 font-mono text-sm text-slate-400">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_8px_#fb923c]"></span>
+                                            <span>Smart Cities y Sensores</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_8px_#fb923c]"></span>
+                                            <span>Automatización Industrial 4.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3: Media Streaming -->
+                        <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
+                            <div
+                                class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-pink-900/20">
+                                <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                                    <img src="assets/img/3.jpg" alt="Streaming"
+                                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-2xl">
+                                            🎬</div>
+                                        <div>
+                                            <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">Media
+                                                Streaming
+                                            </h3>
+                                            <p class="text-pink-400 text-sm font-mono tracking-wider">ENTRETENIMIENTO
+                                                DIGITAL</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-300 mb-8 leading-relaxed">
+                                        Infraestructura CDN global para distribución de contenido 4K/8K.
+                                        Transcodificación
+                                        adaptativa y baja latencia para experiencias de usuario ininterrumpidas.
+                                    </p>
+                                    <div class="space-y-3 font-mono text-sm text-slate-400">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-pink-400 rounded-full shadow-[0_0_8px_#f472b6]"></span>
+                                            <span>Plataformas OTT / VOD</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-pink-400 rounded-full shadow-[0_0_8px_#f472b6]"></span>
+                                            <span>Transmisiones en vivo (Live)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4: Big Data Science -->
+                        <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
+                            <div
+                                class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-indigo-900/20">
+                                <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                                    <img src="assets/img/4.jpg" alt="Big Data"
+                                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-2xl">
+                                            📊</div>
+                                        <div>
+                                            <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">Big Data
+                                                Science
+                                            </h3>
+                                            <p class="text-indigo-400 text-sm font-mono tracking-wider">ANÁLITICA
+                                                AVANZADA
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-300 mb-8 leading-relaxed">
+                                        Data Lakes escalables y pipelines de ETL robustos. Transformamos terabytes de
+                                        información cruda en dashboards visuales accionables para la estrategia
+                                        corporativa.
+                                    </p>
+                                    <div class="space-y-3 font-mono text-sm text-slate-400">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]"></span>
+                                            <span>Minería de datos</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]"></span>
+                                            <span>Visualización interactiva</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
+                    <!-- CONTROLES DEL CARRUSEL -->
+                    <div class="flex justify-center items-center mt-8 gap-4">
+                        <button id="prevBtn"
+                            class="p-3 rounded-full bg-slate-800/50 border border-white/10 hover:bg-slate-700/50 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
 
-                        <div
-                            class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-orange-900/20">
-
-                            <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                                <img src="assets/img/2.jpg"
-                                    alt="IoT"
-                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
-                                <div class="flex items-center gap-4 mb-6">
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-2xl">
-                                        📡</div>
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">IoT &
-                                            Conectividad</h3>
-                                        <p class="text-orange-400 text-sm font-mono tracking-wider">REDES INTELIGENTES
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-300 mb-8 leading-relaxed">
-                                    Gestión de flotas de dispositivos y telemetría industrial. Conectamos el mundo
-                                    físico con la nube mediante protocolos MQTT y Edge Computing de baja latencia.
-                                </p>
-                                <div class="space-y-3 font-mono text-sm text-slate-400">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_8px_#fb923c]"></span>
-                                        <span>Smart Cities y Sensores</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-orange-400 rounded-full shadow-[0_0_8px_#fb923c]"></span>
-                                        <span>Automatización Industrial 4.0</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex gap-2" id="indicators">
+                            <!-- Los indicadores se generarán con JavaScript -->
                         </div>
+
+                        <button id="nextBtn"
+                            class="p-3 rounded-full bg-slate-800/50 border border-white/10 hover:bg-slate-700/50 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
                     </div>
-
-                    <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
-
-                        <div
-                            class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-pink-900/20">
-
-                            <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                                <img src="assets/img/3.jpg"
-                                    alt="Streaming"
-                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
-                                <div class="flex items-center gap-4 mb-6">
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-2xl">
-                                        🎬</div>
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">Media Streaming
-                                        </h3>
-                                        <p class="text-pink-400 text-sm font-mono tracking-wider">ENTRETENIMIENTO
-                                            DIGITAL</p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-300 mb-8 leading-relaxed">
-                                    Infraestructura CDN global para distribución de contenido 4K/8K. Transcodificación
-                                    adaptativa y baja latencia para experiencias de usuario ininterrumpidas.
-                                </p>
-                                <div class="space-y-3 font-mono text-sm text-slate-400">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-pink-400 rounded-full shadow-[0_0_8px_#f472b6]"></span>
-                                        <span>Plataformas OTT / VOD</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-pink-400 rounded-full shadow-[0_0_8px_#f472b6]"></span>
-                                        <span>Transmisiones en vivo (Live)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="min-w-full md:min-w-[85%] lg:min-w-[100%] flex-shrink-0 snap-center px-2">
-
-                        <div
-                            class="relative group w-full bg-slate-900 border border-white/10 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-indigo-900/20">
-
-                            <div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
-                                <img src="assets/img/4.jpg"
-                                    alt="Big Data"
-                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-slate-900 via-transparent to-transparent opacity-90">
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-slate-900/50 backdrop-blur-sm">
-                                <div class="flex items-center gap-4 mb-6">
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center text-2xl">
-                                        📊</div>
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-bold text-white font-mono">Big Data Science
-                                        </h3>
-                                        <p class="text-indigo-400 text-sm font-mono tracking-wider">ANÁLITICA AVANZADA
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-300 mb-8 leading-relaxed">
-                                    Data Lakes escalables y pipelines de ETL robustos. Transformamos terabytes de
-                                    información cruda en dashboards visuales accionables para la estrategia corporativa.
-                                </p>
-                                <div class="space-y-3 font-mono text-sm text-slate-400">
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]"></span>
-                                        <span>Minería de datos</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <span
-                                            class="w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_8px_#818cf8]"></span>
-                                        <span>Visualización interactiva</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-                <div class="flex justify-center items-center mt-6 text-slate-500 font-mono text-sm animate-pulse">
-                    <span class="mr-2">&lt;</span> Desliza para explorar <span class="ml-2">&gt;</span>
-                </div>
-
             </div>
         </section>
 
@@ -797,6 +815,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT PARA EL CARRUSEL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let current = 0;
+            const slides = document.querySelectorAll('#carousel > div');
+
+            document.getElementById('nextBtn').onclick = () => carousel.scrollTo({ left: slides[current = (current + 1) % slides.length].offsetLeft, behavior: 'smooth' });
+            document.getElementById('prevBtn').onclick = () => carousel.scrollTo({ left: slides[current = (current - 1 + slides.length) % slides.length].offsetLeft, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 
